@@ -7,7 +7,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-//@ServletComponentScan(basePackages = {"com.segmentfault.springboot.lession4.servlet"})
+@ServletComponentScan(basePackages = {"com.segmentfault.springboot.lession4.servlet"})
 public class SpringBootLession4Application extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
