@@ -48,5 +48,6 @@
         <module>segmentfault-springboot-lession1</module>
         <module>segmentfault-springboot-lession4</module>
         <module>segmentfault-springboot-lession5</module>
+        <module>segmentfault-springboot-lession7</module>
     </modules>
 </project>
