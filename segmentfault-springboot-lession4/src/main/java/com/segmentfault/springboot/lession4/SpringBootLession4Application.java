@@ -18,4 +18,5 @@ public class SpringBootLession4Application extends SpringBootServletInitializer 
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
         return builder.sources(SpringBootLession4Application.class);
     }
+
 }
