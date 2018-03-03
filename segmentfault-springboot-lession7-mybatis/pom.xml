@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>segmentfault-springboot-lession7</artifactId>
+    <artifactId>segmentfault-springboot-lession7-mybatis</artifactId>
 
     <dependencies>
         <dependency>

@@ -1,4 +1,4 @@
-package com.segmentfault.lession1;
+package com.segmentfault.springboot.lession1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
