@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="TestTables">
+        <!-- jdbc连接 -->
+        <jdbcConnection
+                driverClass="com.mysql.jdbc.Driver"
+                connectionURL="jdbc:mysql://localhost:3306/segmentfault_springboot"
+                userId="root"
+                password="123456"/>
+
+        <!-- java模型对象生成器 -->
+        <javaModelGenerator
+                targetPackage="com.segmentfault.springboot.lession7.entity_by_generator"
+                targetProject="${user.dir}/src/main/java"/>
+
+        <!-- sql xml mapper 生成器 -->
+        <sqlMapGenerator
+                targetPackage="com.segmentfault.springboot.lession7.mybatis.mappers_by_generator"
+                targetProject="${user.dir}/src/main/resources"/>
+
+        <!-- sql interface mapper 生成器 -->
+        <javaClientGenerator
+                type="XMLMAPPER"
+                targetPackage="com.segmentfault.springboot.lession7.mybatis.mappers_by_generator"
+                targetProject="${user.dir}/src/main/java"/>
+
+        <!-- 表映射 -->
+        <table tableName="user">
+            <generatedKey column="id" sqlStatement="mysql" identity="true"/>
+            <columnOverride column="name" property="name"/>
+            <columnOverride column="age" property="age"/>
+            <columnOverride column="desc_json" property="desc"/>
+        </table>
+    </context>
+</generatorConfiguration>
