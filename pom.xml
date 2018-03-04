@@ -49,5 +49,6 @@
         <module>segmentfault-springboot-lession4-jsp</module>
         <module>segmentfault-springboot-lession5-embeddserver</module>
         <module>segmentfault-springboot-lession7-mybatis</module>
+        <module>segmentfault-springboot-lession8-jpa</module>
     </modules>
 </project>

@@ -1,4 +1,4 @@
-package com.segmentfault.lession4.web.controller;
+package com.segmentfault.springboot.lession4.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

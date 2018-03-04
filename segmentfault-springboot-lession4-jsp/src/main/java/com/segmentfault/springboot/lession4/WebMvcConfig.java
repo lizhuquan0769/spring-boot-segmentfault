@@ -1,4 +1,4 @@
-package com.segmentfault.lession4;
+package com.segmentfault.springboot.lession4;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
