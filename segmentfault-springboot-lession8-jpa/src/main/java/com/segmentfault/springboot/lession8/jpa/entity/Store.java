@@ -15,6 +15,11 @@ public class Store {
     private String name;
 
     @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "jpa_relate_store_guest",
+            joinColumns = @JoinColumn(name = "relate_store_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "relate_guest_id", referencedColumnName = "id")
+    )
     private List<Guest> guests;
 
     public Long getId() {

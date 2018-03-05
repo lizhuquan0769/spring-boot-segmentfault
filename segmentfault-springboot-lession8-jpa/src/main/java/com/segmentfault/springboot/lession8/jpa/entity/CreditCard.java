@@ -18,6 +18,7 @@ public class CreditCard {
     private Date regDate;
 
     @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "guest_id")
     private Guest guest;
 
     public Long getId() {

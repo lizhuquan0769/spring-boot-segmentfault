@@ -55,6 +55,16 @@ public class GuestController {
         return "add success";
     }
 
+    @GetMapping("/{guestId}")
+    @Transactional
+    public String find(@PathVariable Long guestId) {
+        Guest guest = entityManager.find(Guest.class, guestId);
+
+        System.out.println(guest);
+
+        return "get success";
+    }
+
     /**
      * 级联删除：需要配置CascadeType.REMOVE，相应的记录才会被级联删除
      * @param guestId
@@ -90,7 +100,7 @@ public class GuestController {
     }
 
     /**
-     * 级联合并，相应字段需要配置CascadeType.MERGE，entityManager.merge函数才会生效，guest实体的creditCard字段的修改才会生效
+     * 级联合并
      * @param guestId
      * @return
      */
@@ -99,16 +109,38 @@ public class GuestController {
     public String merge(@PathVariable Long guestId) {
 
         Guest guest = entityManager.find(Guest.class, guestId);
-        guest.setName("更新后的guestName->meger");
-
         CreditCard creditCard = guest.getCreditCard();
-        creditCard.setCardNo("更新后的cardNo->meger");
 
         // 清空所有对象
         entityManager.clear();
-        System.out.println();
+
+        guest.setName("更新后的guestName->meger");
+
+        // 合并guest对象，由于guest的creditCard字段配置了CascadeType.MERGE, 所以creditCard的修改也会发送update语句
+        creditCard.setCardNo("更新后的cardNo->meger");
+
         entityManager.merge(guest);
 
         return "merge success";
     }
+
+    @GetMapping("/detach/{guestId}")
+    @Transactional
+    public String detect(@PathVariable Long guestId) {
+
+        Guest guest = entityManager.find(Guest.class, guestId);
+        CreditCard creditCard = guest.getCreditCard();
+
+        entityManager.detach(guest);
+
+        // 此时guest实体被分离, 方法结束后并不会执行update语句
+        guest.setName("更新后的cardNo->detach");
+
+        // 由于guest.creditCard配置了CascadeType.DETACH, 所以guest实体的creditCard字段也会被分离, 方法结束后也不会发送update语句
+        creditCard.setCardNo("更新后的cardNo->detach");
+
+        return "detect success";
+    }
+
+
 }
