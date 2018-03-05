@@ -15,13 +15,21 @@ public class Guest {
     @Column(length = 64)
     private String name;
 
-    @OneToOne(mappedBy = "guest", cascade = {CascadeType.REMOVE, CascadeType.MERGE}, fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "guest",
+            cascade = {CascadeType.REMOVE, CascadeType.MERGE, CascadeType.DETACH},
+            fetch = FetchType.LAZY)
     private CreditCard creditCard;
 
-    @OneToMany(mappedBy = "guest", cascade = {CascadeType.REMOVE}, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "guest",
+            cascade = {CascadeType.REMOVE},
+            fetch = FetchType.LAZY)
+    @OrderBy(value = "id ASC")
     private List<Car> cars;
 
-    @ManyToMany(mappedBy = "guests", cascade = {CascadeType.REMOVE}, fetch = FetchType.LAZY)
+    @ManyToMany(mappedBy = "guests",
+            cascade = {CascadeType.REMOVE},
+            fetch = FetchType.LAZY)
+    @OrderBy(value = "id DESC")
     private List<Store> stores;
 
     public Long getId() {
