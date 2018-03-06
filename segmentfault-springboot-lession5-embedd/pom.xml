@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>segmentfault-springboot-lession5-embeddedserver</artifactId>
+    <artifactId>segmentfault-springboot-lession5-embedd</artifactId>
 
     <dependencies>
         <dependency>
