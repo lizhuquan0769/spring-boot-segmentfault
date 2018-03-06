@@ -6,6 +6,7 @@ import com.segmentfault.springboot.lession8.jpa.entity.Guest;
 import com.segmentfault.springboot.lession8.jpa.entity.Store;
 import com.segmentfault.springboot.lession8.jpa.repository.GuestRepository;
 import com.segmentfault.springboot.lession8.service.GuestService;
+import com.segmentfault.springboot.lession8.service.dto.GuestDTO;
 import com.segmentfault.springboot.lession8.web.vo.GuestVO;
 import org.dozer.DozerBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -134,7 +135,9 @@ public class GuestController {
     @GetMapping("/dozer/{guestId}")
     public GuestVO convertByDozer(@PathVariable Long guestId) {
 
-        GuestVO guestVO = guestService.findById(guestId);
+        GuestDTO guestDTO = guestService.findById(guestId);
+
+        GuestVO guestVO = dozerBeanMapper.map(guestDTO, GuestVO.class);
         return guestVO;
     }
 }

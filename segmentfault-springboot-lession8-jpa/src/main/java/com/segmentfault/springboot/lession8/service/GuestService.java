@@ -2,6 +2,7 @@ package com.segmentfault.springboot.lession8.service;
 
 import com.segmentfault.springboot.lession8.jpa.entity.Guest;
 import com.segmentfault.springboot.lession8.jpa.repository.GuestRepository;
+import com.segmentfault.springboot.lession8.service.dto.GuestDTO;
 import com.segmentfault.springboot.lession8.web.vo.GuestVO;
 import org.dozer.DozerBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +19,9 @@ public class GuestService {
     @Autowired
     private DozerBeanMapper dozerBeanMapper;
 
-    public GuestVO findById(Long id) {
+    public GuestDTO findById(Long id) {
 
         Guest guest = guestRepository.findOne(id);
-        return dozerBeanMapper.map(guest, GuestVO.class);
+        return dozerBeanMapper.map(guest, GuestDTO.class);
     }
 }
