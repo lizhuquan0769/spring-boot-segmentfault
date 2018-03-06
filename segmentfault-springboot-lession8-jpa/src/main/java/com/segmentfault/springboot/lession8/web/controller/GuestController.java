@@ -134,9 +134,7 @@ public class GuestController {
 
     @GetMapping("/dozer/{guestId}")
     public GuestVO convertByDozer(@PathVariable Long guestId) {
-
         GuestDTO guestDTO = guestService.findById(guestId);
-
         GuestVO guestVO = dozerBeanMapper.map(guestDTO, GuestVO.class);
         return guestVO;
     }

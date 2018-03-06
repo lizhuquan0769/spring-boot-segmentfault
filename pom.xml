@@ -41,6 +41,10 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
         </plugins>
     </build>
 
@@ -50,5 +54,6 @@
         <module>segmentfault-springboot-lession5-embedd</module>
         <module>segmentfault-springboot-lession7-mybatis</module>
         <module>segmentfault-springboot-lession8-jpa</module>
+        <module>segmentfault-springboot-lession9-nosql</module>
     </modules>
 </project>
