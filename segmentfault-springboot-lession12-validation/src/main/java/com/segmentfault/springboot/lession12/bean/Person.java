@@ -1,7 +1,9 @@
 package com.segmentfault.springboot.lession12.bean;
 
 import com.segmentfault.springboot.lession12.validation.bean.PersonNamePrefix;
+import org.springframework.validation.annotation.Validated;
 
+import javax.validation.Valid;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;

@@ -17,7 +17,9 @@ import javax.validation.Valid;
 public class PersonController {
 
     @PostMapping
-    public Person addPerson(@RequestBody @Valid Person person, BindingResult bindingResult) {
+    public Person addPerson(@RequestBody @Valid Person person
+//            , BindingResult bindingResult
+    ) {
         return person;
     }
 }
