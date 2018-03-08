@@ -55,5 +55,6 @@
         <module>segmentfault-springboot-lession7-mybatis</module>
         <module>segmentfault-springboot-lession8-jpa</module>
         <module>segmentfault-springboot-lession10-cache</module>
+        <module>segmentfault-springboot-lession12-validation</module>
     </modules>
 </project>
