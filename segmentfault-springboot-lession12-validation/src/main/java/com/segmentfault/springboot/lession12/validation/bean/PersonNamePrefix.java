@@ -5,6 +5,7 @@ import javax.validation.Payload;
 import java.lang.annotation.*;
 
 /**
+ * 自定义bean校验注解
  * Created by lizhuquan on 2018/3/8.
  */
 @Target({ElementType.FIELD, ElementType.METHOD})

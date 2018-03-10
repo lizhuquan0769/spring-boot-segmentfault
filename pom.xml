@@ -56,5 +56,6 @@
         <module>segmentfault-springboot-lession8-jpa</module>
         <module>segmentfault-springboot-lession10-cache</module>
         <module>segmentfault-springboot-lession12-validation</module>
+        <module>segmentfault-springboot-lession13-websocket</module>
     </modules>
 </project>

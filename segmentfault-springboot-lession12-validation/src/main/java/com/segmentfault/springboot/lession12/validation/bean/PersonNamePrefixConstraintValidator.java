@@ -4,6 +4,7 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 /**
+ * 自定义bean校验注解的校验器
  * Created by lizhuquan on 2018/3/8.
  */
 public class PersonNamePrefixConstraintValidator implements ConstraintValidator<PersonNamePrefix, String> {
