@@ -57,6 +57,10 @@
         <module>segmentfault-springboot-lession10-cache</module>
         <module>segmentfault-springboot-lession12-validation</module>
         <module>segmentfault-springboot-lession13-websocket</module>
+        <module>segmentfault-springboot-lession14-async-servlet</module>
         <module>segmentfault-springboot-lession16-logback</module>
+        <module>segmentfault-springboot-lession18-config</module>
+        <module>segmentfault-springboot-lession19-test</module>
+        <module>segmentfault-springboot-lession20-starter</module>
     </modules>
 </project>

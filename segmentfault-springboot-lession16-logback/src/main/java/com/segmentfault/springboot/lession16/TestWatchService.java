@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.util.List;
 
+/**
+ * 监听文件变化
+ */
 public class TestWatchService {
     public static void main(String[] args) throws IOException {
         // 需要监听的文件目录（只能监听目录）
